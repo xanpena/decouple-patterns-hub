@@ -54,6 +54,10 @@
         "symfony/polyfill-php81": "*"
     },
     "scripts": {
+        "cs-fix": "./vendor/bin/php-cs-fixer fix",
+        "codesniffer": "./vendor/bin/phpcs",
+        "stan": "./vendor/bin/phpstan analyse --level=9",
+        "phpmd": "./vendor/bin/phpmd src ansi phpmd.xml",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"

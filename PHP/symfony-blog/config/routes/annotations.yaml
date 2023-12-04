@@ -1,0 +1,4 @@
+controllers:
+    resource: ../../src/Blog/Post/Infrastructure/Symfony/Controller/Api/
+    type: annotation
+  
