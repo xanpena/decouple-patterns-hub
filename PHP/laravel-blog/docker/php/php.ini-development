@@ -1,0 +1,15 @@
+date.timezone=UTC
+
+extension_dir="ext"
+extension=curl
+extension=fileinfo
+extension=exif    
+extension=gd
+extension=gmp
+extension=mbstring
+extension=openssl
+extension=pdo_mysql
+
+memory_limit=1024M
+upload_max_filesize=40M
+post_max_size=40M

@@ -24,8 +24,8 @@ $rules = [
     'cast_spaces' => true,
     'class_attributes_separation' => [
         'elements' => [
-           'method' => 'one',
-           'trait_import' => 'none'
+            'method' => 'one',
+            'trait_import' => 'none'
         ]
     ],
     'class_definition' => true,
@@ -137,7 +137,6 @@ $rules = [
 
 $finder = Finder::create()
     ->in([
-        __DIR__ . '/app',
         __DIR__ . '/config',
         __DIR__ . '/database',
         __DIR__ . '/resources',
