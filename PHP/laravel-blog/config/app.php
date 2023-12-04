@@ -161,6 +161,11 @@ return [
          */
 
         /*
+         * DDD Service Providers...
+         */
+        App\Blog\Post\Infrastructure\Laravel\Providers\PostServiceProvider::class,
+
+        /*
          * Application Service Providers...
          */
         App\Shared\Infrastructure\Laravel\Providers\AppServiceProvider::class,

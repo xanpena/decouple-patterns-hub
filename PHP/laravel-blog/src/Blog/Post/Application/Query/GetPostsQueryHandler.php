@@ -23,7 +23,7 @@ final class GetPostsQueryHandler implements QueryHandlerInterface
 
         $response = array_map(function (Post $post) {
             return GetPostQueryResponse::fromEntity($post);
-        }, $posts);
+        }, $posts->toArray());
 
         return $response;
     }

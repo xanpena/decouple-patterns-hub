@@ -17,8 +17,11 @@ services:
             - ${DB_PORT}:3306
         networks:
             - laravel-network
-    php:
-        image: php:8.2-fpm
+    app:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: laravel-docker
         container_name: laravel-app
         links:
             - db
@@ -40,7 +43,7 @@ services:
             - "80:80"
             - "443:443"
         links:
-            - php
+            - app
         networks:
             - laravel-network
 

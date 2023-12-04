@@ -11,5 +11,5 @@ interface PostReadableRepositoryInterface
 {
     public function findAll();
 
-    public function findOne(PostId $postId): ?Post;
+    public function findOne(int $postId);
 }
