@@ -1,0 +1,11 @@
+parameters:
+	level: 8
+	paths:
+		- src
+		- tests
+		- config
+	ignoreErrors:
+		- '#Unknown class#'
+
+includes:
+	- ./vendor/phpstan/phpstan-phpunit/extension.neon
