@@ -29,15 +29,8 @@ final class GetPostsAction extends Controller
             if (null === $posts) {
                 return new JsonResponse(['error' => 'No results'], Response::HTTP_NOT_FOUND);
             }
-            dd($posts);
-            $responseData = [
-                'id' => $post->getId(),
-                'title' => $post->getTitle(),
-                'body' => $post->getBody(),
-                'authorId' => $post->getAuthorId(),
-                'authorEmail' => $post->getAuthorEmail(),
-                'authorName' => $post->getAuthorName(),
-            ];
+
+            $responseData = $posts; // TODO
 
             $response = ['data' => $responseData];
 
