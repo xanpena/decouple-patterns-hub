@@ -1,0 +1,16 @@
+grumphp:
+  tasks:
+    phpcsfixer2:
+      config: ".php-cs-fixer.php"
+    phpcs:
+      standard: "phpcs.xml"
+      whitelist_patterns:
+        - /^src/
+    phpmd:
+      ruleset:
+        - "phpmd.xml"
+      whitelist_patterns:
+        - /^src/
+    phpstan:
+      level: 8
+    phpunit:

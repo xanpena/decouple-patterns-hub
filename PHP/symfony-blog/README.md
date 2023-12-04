@@ -1,1 +1,1 @@
-# Decoupled Patterns Explorer in Symfony
+# Decoupled Patterns Explorer with Symfony
