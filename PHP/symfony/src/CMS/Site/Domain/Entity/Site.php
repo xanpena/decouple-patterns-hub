@@ -21,7 +21,8 @@ class Site implements AggregateRoot
         protected readonly SiteDomainExtension $domainExtension,
         protected readonly SiteFavicon $favicon,
         protected readonly SiteName $name,
-        protected readonly SiteLang $lang
+        protected readonly SiteLang $lang,
+        protected readonly SiteAnalyticsTag $analyticsTag
     ) {
         $this->domain = $domain;
         $this->domainExtension = $domainExtension;
