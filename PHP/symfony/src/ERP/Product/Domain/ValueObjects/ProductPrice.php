@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\ERP\Product\Domain\ValueObjects;
 
-use App\Shared\Domain\Exception\LessThanZeroException;
+use App\Shared\Domain\Validation\FloatValidation;
 
 class ProductPrice
 {
@@ -18,9 +18,7 @@ class ProductPrice
 
     private function validate(float $value): void
     {
-        if ($value < 0) {
-            throw LessThanZeroException::lessThanZero('The price must be greater than 0');
-        }
+        FloatValidation::isPositive($value, 'The price must be greater than 0');
     }
 
     public function value(): float

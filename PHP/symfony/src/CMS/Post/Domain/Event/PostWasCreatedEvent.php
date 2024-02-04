@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Blog\Post\Domain\Event;
+namespace App\CMS\Post\Domain\Event;
 
-use App\Blog\Post\Domain\Post;
+use App\CMS\Post\Domain\Post;
 use App\Shared\Domain\Event\AbstractDomainEvent;
 
 class PostWasCreatedEvent extends AbstractDomainEvent

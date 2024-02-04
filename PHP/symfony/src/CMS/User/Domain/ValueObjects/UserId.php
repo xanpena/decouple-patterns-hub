@@ -2,12 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\ERP\Product\Domain\ValueObjects;
+namespace CMS\User\Domain\ValueObjects;
 
-use App\Shared\Domain\Exception\InvalidIntException;
-use App\Shared\Domain\Validation\IdValidation;
-
-final class ProductId
+class UserId
 {
     private int $value;
 
@@ -19,7 +16,9 @@ final class ProductId
 
     private function validate(int $id): void
     {
-        IdValidation::isValid($id, 'Invalid id');
+        if ($id < 1) {
+            throw new \InvalidArgumentException('Invalid id');
+        }
     }
 
     public function value(): int

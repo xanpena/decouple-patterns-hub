@@ -6,6 +6,7 @@ namespace App\ERP\Product\Domain\ValueObjects;
 
 use App\Shared\Domain\Exception\CharacterLimitExcededException;
 use App\Shared\Domain\Exception\NotNullOrEmptyException;
+use App\Shared\Domain\Validation\StringValidation;
 
 final class ProductName
 {
@@ -19,13 +20,8 @@ final class ProductName
 
     private function validate(string $title): void
     {
-        if (null === $title || '' === $title) {
-            throw NotNullOrEmptyException::notNullOrEmpty(static::class);
-        }
-
-        if (mb_strlen($title) > 255) {
-            throw CharacterLimitExcededException::exceedLimit(static::class);
-        }
+        StringValidation::isNotEmpty($title, 'The title must not be empty');
+        StringValidation::hasMaxLength($title, 255, 'The title must not exceed 255 characters');
     }
 
     public function value(): string
